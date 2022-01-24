@@ -5,7 +5,7 @@
 name: Metrics
 on:
   # 🌏 Think about the planet! No need to update stats too frequently
-  schedule: [{cron: "0 16 * * *"}]
+  schedule: [{cron: "0 5 * * *"}]
 
   # 💡 The following line lets you run workflow manually from the action tab!
   workflow_dispatch:
@@ -41,8 +41,9 @@ jobs:
           plugin_languages: yes
           plugin_languages_indepth: yes
           plugin_languages_details: lines, bytes-size, percentage
-          plugin_languages_limit: 10
-      - name: JavaScript or TypeScript snippet of the day
+          plugin_habits_from: 1000
+          plugin_habits_days: 30
+      - name: Code snippet of the day
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.code.svg
