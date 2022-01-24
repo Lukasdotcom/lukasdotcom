@@ -42,3 +42,12 @@ jobs:
           plugin_languages_indepth: yes
           plugin_languages_details: lines, bytes-size, percentage
           plugin_languages_limit: 10
+      - name: JavaScript or TypeScript snippet of the day
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.code.svg
+          token: ${{ secrets.TOKEN }}
+          base: ""
+          plugin_code: yes
+          plugin_code_languages: javascript, php, python, GDScript
+          plugin_code_load: 1000
