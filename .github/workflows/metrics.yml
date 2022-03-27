@@ -53,3 +53,4 @@ jobs:
           plugin_code: yes
           plugin_code_languages: javascript, php, python, GDScript
           plugin_code_load: 1000
+          plugin_code_days: 365
